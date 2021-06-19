@@ -1,0 +1,156 @@
+/* fondo de pantalla y eliminacion de estilos predeterminados */
+html{
+    background-image: url(../image/header/imagen\ fondo\ ladrillo.jpg);
+}
+li{    
+    list-style-type: none;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+a{
+text-decoration: none; 
+}
+/* grilla principal de la pagina */
+.gridIndex{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 200px 75px 1300px 200px;
+    grid-template-areas: "logo logo logo banner banner banner banner banner banner banner"
+                          "menu menu menu menu menu menu menu menu menu menu "
+                          "servicios servicios servicios servicios servicios servicios servicios imagenes imagenes imagenes"                                             
+                          "redes redes redes textos textos textos textos textos textos disenador";    
+    justify-items: stretch;
+    justify-content: space-evenly;    
+}
+/* header, logo y banner (a futuro deberia tener movimiento)*/
+.flexHeader{    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;       
+}
+#logo{    
+    grid-area: logo;
+    height: 200px;
+    width: 300px;
+    align-self:stretch;
+}
+#banner{
+    margin-left: 120px;
+    grid-area: banner;    
+    width: 70%;    
+}
+/* menu de navegacion */
+.menu{  
+    grid-area: menu;
+    background-image: linear-gradient(to left, rgb(153, 0, 255) , rgb(157, 60, 170));             
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+    justify-items: center;
+    height: 50px;
+    width: 100%;
+}
+#menuColor{    
+    color: white;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif; 
+}
+/* contenido del main */
+h2{
+    margin-top: 0;
+    padding-top: 0;
+    grid-area: servicios;    
+    color: red;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}    
+h3{
+    grid-area: servicios;
+    background-color:rgb(225, 226, 228) ;
+    color: green;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+} 
+#camaras{
+    margin-top: 100px;    
+}
+#seguros{
+    margin-top: 150px;    
+}
+#instalaciones{
+    margin-top: 100px;    
+}                    
+.servicios{
+    grid-area: servicios;
+    display: inline-block;
+    background-color:rgb(225, 226, 228) ;
+    color:black;
+    text-decoration: none;    
+    font-style: italic;
+    font-weight: normal;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px; 
+    text-align: left;
+    flex-direction: row;
+    height: 1230px;
+    width: 100;        
+}
+.servicios__imagenes{  
+    grid-area: imagenes;
+    display: inline-block;
+    flex-direction: row;
+    text-align:center;        
+    height: 850px;
+    width: 100;   
+}
+/* footer */
+.redes{
+    grid-area: redes;
+    background-image: linear-gradient(to right, rgb(68, 0, 255) , rgb(157, 60, 170));
+    display: flex;
+    flex-direction: row; 
+    justify-content:flex-start;    
+    height: 100px;
+    width: 200px;    
+}
+#textos{
+    grid-area: textos;    
+    background-color: rgb(157, 60, 170);    
+    display: flex;
+    flex-direction: row; 
+    justify-content:center;   
+    align-content: center;
+    columns: 10px;
+    font-size: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight:normal;    
+    width: 1090px;    
+}
+.textos{    
+    color: white;
+    text-align: start;
+    align-items:stretch;    
+}
+.disenador{/* la intencion es poner los accesos del programador y/o diseñador de la pagina */
+    grid-area: disenador;
+    display: flex;
+    background-color: rgb(157, 60, 170); 
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    height: 100px;
+    width: 200px;
+}
